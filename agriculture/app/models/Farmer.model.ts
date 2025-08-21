@@ -59,6 +59,6 @@ const FarmerSchema: Schema<Farmer> = new Schema({
     }
 })
 
-const FarmerModel = (mongoose.models.Farmer as mongoose.Model<Farmer>) || mongoose.model<Farmer>("Farmer",FarmerSchema)
+const Farmer = (mongoose.models.Farmer as mongoose.Model<Farmer>) || mongoose.model<Farmer>("Farmer",FarmerSchema)
 
-export default FarmerModel
+export default Farmer

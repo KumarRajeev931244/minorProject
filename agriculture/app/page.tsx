@@ -1,6 +1,7 @@
 import React from "react";
 import { Leaf, Sprout, Brain } from "lucide-react";
-
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100 flex flex-col">
@@ -14,7 +15,10 @@ export default function Home() {
           <a href="#features" className="hover:text-green-700">Features</a>
           <a href="#about" className="hover:text-green-700">About</a>
           <a href="#contact" className="hover:text-green-700">Contact</a>
-          <a href="#login" className="hover:text-green-700">Login</a>
+          <Link href='/sign-in'>
+            <Button className="w-full md:w-auto cursor-pointer">Login</Button>
+          </Link>
+          {/* <a href="#login" className="hover:text-green-700">Login</a> */}
         </nav>
       </header>
 

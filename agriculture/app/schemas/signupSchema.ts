@@ -1,13 +1,17 @@
 import { z } from "zod";
 
-export const usernameValidation =z
+export const fnameValidation =z
     .string()
-    .min(2, {message:"username must be atleast 2 character"})
-    .max(10, {message:"username not more than 10 character"})
-    .regex(/^[a-zA-Z0-9_-]+$/,{message:"username must not contain special character"})
+    .min(2, {message:"farmer name must be atleast 2 character"})
+    .max(10, {message:"farmer name not more than 10 character"})
+    .regex(/^[a-zA-Z0-9_-]+$/,{message:"farmer name must not contain special character"})
 
 export const signUpSchema = z.object({
-    username: usernameValidation,
+    fname: fnameValidation,
+    cnumber: z
+            .string()
+            .min(10).
+            max(10),
     email: z
         .string()
         .email({message: "invalid email address"}),
